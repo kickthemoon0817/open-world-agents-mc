@@ -17,3 +17,8 @@ downloads/
 
 # Virtual environments
 .venv
+
+# javascript files
+node_modules/
+package.json
+package-lock.json

@@ -13,7 +13,7 @@ print(CALLABLES, LISTENERS)
 
 # now, let's test the clock/tick listener
 tick = LISTENERS["clock/tick"]().configure(callback=lambda: print(CALLABLES["clock.time_ns"]()))
-tick.configure(interval=1)
+tick.on_configure(interval=1)
 tick.start()
 
 time.sleep(1)  # during this time, the tick listener will print the time in nanoseconds 1 or 2 time
@@ -21,16 +21,17 @@ time.sleep(1)  # during this time, the tick listener will print the time in nano
 
 tick.stop(), tick.join()
 
-# ========================================
+# Skip the screen capture part, since the "bettercam" module dont support the darwin platform
+# # ========================================
 
-# activate the desktop module, which contains the keyboard/mouse, screen, window modules
+# # activate the desktop module, which contains the keyboard/mouse, screen, window modules
 activate_module("owa_env_desktop")
 
-print(CALLABLES, LISTENERS)
+# print(CALLABLES, LISTENERS)
 
-print(CALLABLES["screen.capture"]().shape)  # (1080, 1920, 3)
-print(CALLABLES["window.get_active_window"]())
-print(CALLABLES["window.get_window_by_title"]("open-world-agents"))
+# print(CALLABLES["screen.capture"]().shape)  # (1080, 1920, 3)
+# print(CALLABLES["window.get_active_window"]())
+# print(CALLABLES["window.get_window_by_title"]("open-world-agents"))
 
 
 # Get the callable function for mouse click

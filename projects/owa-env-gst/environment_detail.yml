@@ -83,10 +83,10 @@ dependencies:
   - svt-av1=2.3.0=he0c23c2_0
   - tk=8.6.13=h5226925_1
   - tzdata=2025a=h78e105d_0
-  - ucrt=10.0.22621.0=h57928b3_1
-  - vc=14.3=h5fd82a7_24
-  - vc14_runtime=14.42.34433=h6356254_24
-  - vs2015_runtime=14.42.34433=hfef2bbc_24
+  - ucrt=10.0.22621.0=h57928b3_1 # [win]
+  - vc=14.3=h5fd82a7_24 # [win]
+  - vc14_runtime=14.42.34433=h6356254_24  # [win]
+  - vs2015_runtime=14.42.34433=hfef2bbc_24  # [win]
   - wheel=0.45.1=pyhd8ed1ab_1
   - x264=1!164.3095=h8ffe710_2
   - x265=3.5=h2d74725_3
